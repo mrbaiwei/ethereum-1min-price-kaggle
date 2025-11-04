@@ -9,7 +9,7 @@ Automation with GitHub Actions: The entire update process runs automatically usi
 
 Easy Deployment: Minimal configuration is required to start updating your Kaggle dataset daily.
 
-# Requirements
+# Requirements #
 
 Before running the workflow, you need to define two secret variables in your GitHub repository:
 

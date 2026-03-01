@@ -1,7 +1,7 @@
 # Automatic Ethereum Price Update on Kaggle
 This project provides an automated pipeline to collect, update, and publish Ethereum (ETH) 1-minute OHLC price data on Kaggle. The dataset is updated daily with the most recent data from the Bitstamp public API and posted automatically to Kaggle.
 
-# Features
+# Features 
 
 Daily Updates: Fetches the latest ETH/USD 1-minute OHLC data and keeps the Kaggle dataset up to date.
 

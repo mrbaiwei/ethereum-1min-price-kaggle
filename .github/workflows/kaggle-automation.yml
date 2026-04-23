@@ -15,13 +15,13 @@ jobs:
           KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
           KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
         run: |
-          if [ -z "${{ secrets.KAGGLE_USERNAME }}" ]; then
+          if [ -z "${KAGGLE_USERNAME}" ]; then
             echo "Secret is EMPTY"
             exit 1
           else
             echo "Secret is FOUND (Length: ${#KAGGLE_USERNAME})"
           fi
-          if [ -z "${{ secrets.KAGGLE_KEY }}" ]; then
+          if [ -z "${KAGGLE_KEY}" ]; then
             echo "Secret is EMPTY"
             exit 1
           else

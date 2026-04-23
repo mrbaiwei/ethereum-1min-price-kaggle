@@ -100,7 +100,7 @@ if __name__ == "__main__":
     now_ts = int(time.time())
     pair = "ethusd"
     step = 60
-    dataset_slug = "viniciusqroz/ethereum-historical-data"
+    dataset_slug = "williambai1/ethusd-1min-ohlc"
 
     # Load most recent data from Kaggle
     df_current = load_kaggle_dataset(dataset_slug)

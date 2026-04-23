@@ -22,7 +22,25 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pandas requests kaggle
-
+          
+      - name: Check if secret exists
+        env:
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+        run: |
+          if [ -z "${{ secrets.KAGGLE_USERNAME }}" ]; then
+            echo "Secret is EMPTY"
+            exit 1
+          else
+            echo "Secret is FOUND (Length: ${#KAGGLE_USERNAME})"
+          fi
+          if [ -z "${{ secrets.KAGGLE_KEY }}" ]; then
+            echo "Secret is EMPTY"
+            exit 1
+          else
+            echo "Secret is FOUND (Length: ${#KAGGLE_KEY})"
+          fi
+        
       - name: Run update script
         env:
           KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
